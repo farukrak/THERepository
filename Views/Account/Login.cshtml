@@ -1,0 +1,46 @@
+﻿@model AloeExpress.ViewModels.LoginViewModel
+
+<div class="container" style="position: center; width: 500px; border-radius: 20px; background-color: beige">
+    <form method="post" asp-action="Login" asp-controller="Account">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      
+
+        <div class="text-center">
+            <h1 style="position:center">Вход</h1>
+        </div>
+        <h6 style="color:aqua; margin-left:100px">@ViewBag.Error</h6>
+        <hr />
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" placeholder="Пароль" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RememberMe" class="control-label"></label>
+            <input asp-for="RememberMe" class="form-check-input; btn btn-primary" />
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-outline-primary" style="position:center" value="Войти" />
+        </div>
+        <hr />
+        <div class="text-center">
+            <p style="position:center">Зарегистрируйтесь, если у Вас еще нет аккаунта.</p>
+        </div>
+        <div class="text-center">
+            <a asp-action="Register" asp-controller="Account" class="btn btn-outline-warning">Регистрация</a>
+        </div>
+    </form>
+    <br />
+</div>
+
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

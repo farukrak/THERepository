@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header class="header" style="background-image: url(https://gruzar.com.ua/images/trucking.svg); 
+         height: 600px; background-attachment:local; background-size: cover; 
+         background-position: center center; background-color: silver; 
+         background-blend-mode: multiply; ">
+    <div class="container">
+        <div class="text-center" style="color: white; position: absolute; top: 25%;left:20%; margin:auto;">
+            <h1><strong>Вас приветствует служба доставки AloeExpress</strong></h1>
+            <hr />
+            <h2>
+            <a asp-action="Register" asp-controller="Account"> Зарегистрироваться </a>
+            </h2>
+            <hr />
+            <h2>
+            <a asp-action="Login" asp-controller="Account"> Войти </a>
+            </h2>
+        </div>
+     </div>
+</header>
